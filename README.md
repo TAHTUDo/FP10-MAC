@@ -9,7 +9,7 @@ Für eine manuelle Ausführung, mit gleichem Ergebnis, sind folgende GHDL-Befehl
 - 'ghdl -e {Dateiname}'.
 
 Falls es sich bei der jeweiligen VHDL-Datei um eine Testbench handelt, ist anschließend jeweils der folgende GHDL-Befehl auszuführen:
-- 'ghdl -r <Dateiname> --vcd=VCD&#92;{Dateiname}.vcd --ieee-asserts=disable'.
+- 'ghdl -r {Dateiname} --vcd=VCD&#92;{Dateiname}.vcd --ieee-asserts=disable'.
 
 Da die einzelnen Bausteine der Hardwarekomponenten aufeinander ausbauen ist bei der Ausführung folgende Datei-Reihenfolge einzuhalten:
 1. "and2.vhdl",
