@@ -4,12 +4,12 @@ Dieses Repository enthält eine Harwarekomponente für die Ausführung eines Mul
 Um einen eigenen Testlauf der Hardwarekomponente durchzuführen ist der Ordner 'VHDL' herunterzuladen. Weiterhin wird vorausgesetzt, dass GHDL als Simulator für VHDL und GTKWave für eine anschließende Visualisierung der Ergebnisse installiert ist. Der einfachste Weg, den Testlauf durchzuführen besteht in der Ausführung des Python-Scipts 'main.py' im Ordner 'VHDL', woraufhin automatisch die 'work-obj93.cf' und ein weiterer Ordner 'VCD', welcher die Ergebnisse des Testlaufs als VCD-Dateien enthält, im Ordner 'VHDL' erzeugt werden.
 
 Für eine manuelle Ausführung, mit gleichem Ergebnis, sind folgende GHDL-Befehle für alle VHDL-Dateien nacheinander innerhalb eines Kommandozeilenwerkzeugs im heruntergeladenen VHDL-Ordner auszuführen:
-- 'ghdl -s <Dateiname>.vhdl',
-- 'ghdl -a <Dateiname>.vhdl',
-- 'ghdl -e <Dateiname>'.
+- 'ghdl -s {Dateiname}.vhdl',
+- 'ghdl -a {Dateiname}.vhdl',
+- 'ghdl -e {Dateiname}'.
 
 Falls es sich bei der jeweiligen VHDL-Datei um eine Testbench handelt, ist anschließend jeweils der folgende GHDL-Befehl auszuführen:
-- 'ghdl -r <Dateiname> --vcd=VCD\\<Dateiname>.vcd --ieee-asserts=disable'.
+- 'ghdl -r <Dateiname> --vcd=VCD&#92;{Dateiname}.vcd --ieee-asserts=disable'.
 
 Da die einzelnen Bausteine der Hardwarekomponenten aufeinander ausbauen ist bei der Ausführung folgende Datei-Reihenfolge einzuhalten:
 1. "and2.vhdl",
@@ -48,6 +48,6 @@ Da die einzelnen Bausteine der Hardwarekomponenten aufeinander ausbauen ist bei 
 34. "xor3_tb.vhdl".
 
 Anschließend können die so erzeugten VCD-Dateien im Ordner 'VCD' mit GTKWave visualisiert werden, indem für eine Datei von Interesse der Befehl:
-- 'gtkwave <Dateiname>.vcd'
+- 'gtkwave {Dateiname}.vcd'
 
 innerhalb eines Kommandozeilenwerkzeugs im VCD-Ordner ausgeführt wird.
